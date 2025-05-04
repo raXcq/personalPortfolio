@@ -1,0 +1,27 @@
+{% include "jobs/header.html" %} {% load static %}
+
+<main>
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading font-color text-white fs-2">Caption</h1>
+      <p class="text-white fs-5">{{ job.summary }}</p>
+      <img
+        src="{{ job.image.url }}"
+        class="img-fluid"
+        style="max-height: 500px"
+      />
+      <br />
+      <p>
+        <a href="{% url 'portfolio' %}" class="btn btn-primary my-2" id="links"
+          >Back</a
+        >
+      </p>
+    </div>
+  </section>
+</main>
+
+{% include "jobs/footer.html" %}
+
+<script src="{% static 'jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'popper.min.js' %}"></script>
+<script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
